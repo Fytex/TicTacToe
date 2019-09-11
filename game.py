@@ -220,7 +220,7 @@ def get_computer():
 
     while True:
         mode = int(
-            input('Game difficulty: \n1 - Easy\n2 - Medium\n3 - Hard\n4 - Impossible\n\nSelect Number: '))
+            input('\nGame difficulty: \n1 - Easy\n2 - Medium\n3 - Hard\n4 - Impossible\n\nSelect Number: '))
 
         if 0 < mode < 4:
             mode = modes[mode - 1]
