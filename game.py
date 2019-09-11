@@ -264,7 +264,7 @@ if __name__ == '__main__':
                     restart_play = False
 
         except GameFinished as exc:
-            # system('cls||clear')
+            system('cls||clear')
             print('\n\n' + str(game))
             print('\n\n' + str(exc))
             restart_game = input('\nDo you wanna play again? \'yes\' to continue\n').lower() in [
