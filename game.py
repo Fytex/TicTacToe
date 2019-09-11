@@ -65,8 +65,8 @@ class ComputerPlays:
     def _ai_play(self, impossible=False):
         computer_draw = self.draw
 
-        winning_lines = [{0, 1, 2}, {3, 4, 5}, {6, 7, 8}, {0, 4, 8},
-                         {2, 4, 6}, {0, 3, 6}, {1, 4, 7}, {2, 5, 8}]
+        winning_lines = [(0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 4, 8),
+                         (2, 4, 6), (0, 3, 6), (1, 4, 7), (2, 5, 8)]
 
         table = {idx: draw for idx, draw in enumerate(chain.from_iterable(self.table))}
 
