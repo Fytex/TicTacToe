@@ -209,9 +209,10 @@ class TicTacToe:
                 if idx in args:
                     yield element == player_draw
 
-        if index == 4:  # check both obliqual lines
+        if index == 4:  # check both obliqual lines if player plays in the middle
             return all(equal_elements(*first_obliqual)) or all(equal_elements(*second_obliqual))
-
+        
+        # if player doesn't play in the middle then lets just check the correspondent obliqual instead of both
         return all(equal_elements(index, 4, 8-index))
 
 
