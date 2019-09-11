@@ -234,7 +234,7 @@ if __name__ == '__main__':
     
     print('\n' + ' '*40 + 'TicTacToe\n' + ' '*30 + 'by Fytex (Discord: Fytex#4389)\n')
 
-    with_computer = ~bool(int(input('How many players? (1/2): ')) - 1)
+    with_computer = not (int(input('How many players? (1/2): ')) - 1)
     player_one = Player(input('Player 1 (name): '), 'X')
     player_two = get_computer() if with_computer else Player(input('Player 2 (name): '), 'O')
 
