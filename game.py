@@ -220,12 +220,15 @@ def get_computer():
     modes = ['easy', 'medium', 'hard', 'impossible']
 
     while True:
-        mode = int(
-            input('\nGame difficulty: \n1 - Easy\n2 - Medium\n3 - Hard\n4 - Impossible\n\nSelect Number: '))
-
-        if 0 < mode < 4:
-            mode = modes[mode - 1]
-            break
+        try:
+            mode = int(
+                input('\nGame difficulty: \n1 - Easy\n2 - Medium\n3 - Hard\n4 - Impossible\n\nSelect Number: '))
+        except ValueError:
+            print('Invalid character')
+        else:
+            if 1 <= mode <= 4:
+                mode = modes[mode - 1]
+                break
 
     return Player('Computer', 'O', True, mode)
 
